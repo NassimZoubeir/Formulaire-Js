@@ -69,6 +69,3 @@ function validateForm() {
           submitBtn.disabled = false;
         }
       });
-
-  
-  
