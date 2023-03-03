@@ -12,8 +12,8 @@ function validateForm() {
     // Calcul de l'âge en années
     var age = new Date().getFullYear() - new Date(birthdate).getFullYear();
 
-
     
+     
     if (fname == "") {
         alert("Le champ First Name est obligatoire");
         return false;
@@ -46,9 +46,29 @@ function validateForm() {
           alert("Le champ Email est obligatoire");
           return false;
         }
-        // Si l'âge est valide, on peut soumettre le formulaire
+        alert("Félicitations vous etes inscrit vous pouvez acceder à l'onglet private");
+        // Si l'email est valide, on peut soumettre le formulaire
         return true;
 }  
+      // Récupère une référence au bouton de la navbar
+      const submitBtn = document.getElementById('submitBtn');
+          
+      // Désactive le bouton
+      submitBtn.disabled = true;
+
+      // Ajoute un écouteur d'événements à votre formulaire pour écouter l'événement submit
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+
+        // Empêche la soumission du formulaire
+        event.preventDefault();
+
+        // Vérifie si le formulaire est valide
+        if (form.checkValidity()) {
+          // Active le bouton
+          submitBtn.disabled = false;
+        }
+      });
 
   
   
