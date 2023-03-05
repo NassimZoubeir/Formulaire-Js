@@ -70,3 +70,8 @@ li{
     margin-left: 90px;
     margin-top: -20px;
   }
+img {
+  margin-top: 20px;
+  height: 60px;
+  width: 60px;
+}
