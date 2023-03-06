@@ -1,6 +1,5 @@
-
-
 // Appel de l'API et récupération des données
+
 fetch("https://www.dummyjson.com/products")
 .then(response => response.json())
 .then(data => {
