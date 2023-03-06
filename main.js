@@ -52,20 +52,22 @@ function validateForm() {
 }  
       // Récupère une référence au bouton de la navbar
       const submitBtn = document.getElementById('submitBtn');
-          
+     
       // Désactive le bouton
       submitBtn.disabled = true;
-
+     
       // Ajoute un écouteur d'événements à votre formulaire pour écouter l'événement submit
       const form = document.querySelector('form');
       form.addEventListener('submit', (event) => {
-
+        
         // Empêche la soumission du formulaire
         event.preventDefault();
 
         // Vérifie si le formulaire est valide
         if (form.checkValidity()) {
+
           // Active le bouton
           submitBtn.disabled = false;
+        
         }
       });
