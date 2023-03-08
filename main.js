@@ -1,4 +1,3 @@
-
 function validateForm() {
     // Récupération de la valeur du champ FirstName
     var fname = document.getElementById("fname").value;
@@ -50,14 +49,10 @@ function validateForm() {
         // Si l'email est valide, on peut soumettre le formulaire
         return true;
 }  
-      // Récupère une référence au bouton de la navbar
-      const submitBtn = document.getElementById('submitBtn');
-     
-      // Désactive le bouton
-      submitBtn.disabled = true;
-     
       // Ajoute un écouteur d'événements à votre formulaire pour écouter l'événement submit
       const form = document.querySelector('form');
+      const link = document.querySelector('#link');
+
       form.addEventListener('submit', (event) => {
         
         // Empêche la soumission du formulaire
@@ -68,6 +63,8 @@ function validateForm() {
 
           // Active le bouton
           submitBtn.disabled = false;
+          link.style.pointerEvents ="auto";
+          
         
         }
       });
