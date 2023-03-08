@@ -41,11 +41,18 @@ function validateForm() {
         return false;
       }
       
-      if (email == "") {
-          alert("Le champ Email est obligatoire");
-          return false;
-        }
-        alert("Félicitations vous etes inscrit vous pouvez acceder à l'onglet private");
+      // if (email == "") {
+      //     alert("Le champ Email est obligatoire");
+      //     return false;
+      //   }
+
+      // Vérification de l'email
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+      alert("Veuillez entrer un email valide");
+      return false;
+  }  
+        alert("Félicitations vous etes inscrit, vous pouvez accéder à l'onglet private");
         // Si l'email est valide, on peut soumettre le formulaire
         return true;
 }  
@@ -58,7 +65,7 @@ function validateForm() {
         button.addEventListener('click', () => {
         window.open('private.html', '_blank');
       });
-      
+
       form.addEventListener('submit', (event) => {
         
         // Empêche la soumission du formulaire
@@ -71,7 +78,5 @@ function validateForm() {
           submitBtn.disabled = false;
           link.style.pointerEvents ="auto";
          
-          
-        
         }
       });
