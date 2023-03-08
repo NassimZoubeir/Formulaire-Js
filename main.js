@@ -53,6 +53,12 @@ function validateForm() {
       const form = document.querySelector('form');
       const link = document.querySelector('#link');
 
+      const button = document.getElementById('submitBtn');
+
+        button.addEventListener('click', () => {
+        window.open('private.html', '_blank');
+      });
+      
       form.addEventListener('submit', (event) => {
         
         // Empêche la soumission du formulaire
@@ -64,6 +70,7 @@ function validateForm() {
           // Active le bouton
           submitBtn.disabled = false;
           link.style.pointerEvents ="auto";
+         
           
         
         }

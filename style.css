@@ -1,8 +1,8 @@
 *{
     padding:0;
     margin:0;
-box-sizing: border-box;
-list-style: none;
+    box-sizing: border-box;
+    list-style: none;
 }
 body {
     height: 100%;
@@ -19,9 +19,15 @@ h1 {
     padding: 10px;
     border-radius: 10px;
 }
+#submitBtn {
+  text-decoration: none;
+  border: none;
+}
+
 #link {
   pointer-events: none;
   text-decoration: none;
+  border: none;
 }
   
  input[type=text],
